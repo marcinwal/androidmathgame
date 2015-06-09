@@ -51,36 +51,34 @@
         android:layout_marginTop="49dp"
         android:textSize="70sp" />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="8"
-        android:id="@+id/buttonChoice1"
-        android:layout_marginTop="57dp"
-        android:layout_below="@+id/textView2"
-        android:layout_toRightOf="@+id/textPartA"
-        android:layout_toEndOf="@+id/textPartA"
-        android:textSize="40sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="4"
-        android:id="@+id/buttonChoice2"
-        android:layout_alignTop="@+id/buttonChoice1"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/buttonChoice1"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="43dp"
         android:textSize="40sp" />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="5"
+        android:id="@+id/buttonChoice2"
+        android:textSize="40sp"
+        android:layout_alignTop="@+id/buttonChoice1"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="6"
         android:id="@+id/buttonChoice3"
-        android:layout_alignTop="@+id/buttonChoice2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/buttonChoice2"
+        android:layout_alignRight="@+id/textPartB"
+        android:layout_alignEnd="@+id/textPartB"
         android:textSize="40sp" />
+
 </RelativeLayout>
