@@ -30,12 +30,11 @@ public class GameActivity extends Activity {
 
         //setting the text fields by setText
         textObjectPartA.setText(""+partA);
-        textObjectPartA.setText(""+partB);
+        textObjectPartB.setText(""+partB);
 
         buttonObjectChoice1.setText(""+correctAnswer);
         buttonObjectChoice2.setText(""+wrongAnswer1);
         buttonObjectChoice3.setText(""+wrongAnswer2);
-
 
     }
 
