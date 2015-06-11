@@ -33,10 +33,10 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
 
         //linking to layout objects
-        TextView textObjectPartA = (TextView)findViewById(R.id.textPartA);
-        TextView textObjectPartB = (TextView)findViewById(R.id.textPartB);
-        TextView textObjectScore = (TextView)findViewById(R.id.textScore);
-        TextView textObjectLevel = (TextView)findViewById(R.id.textLevel);
+        textObjectPartA = (TextView)findViewById(R.id.textPartA);
+        textObjectPartB = (TextView)findViewById(R.id.textPartB);
+        textObjectScore = (TextView)findViewById(R.id.textScore);
+        textObjectLevel = (TextView)findViewById(R.id.textLevel);
 
         buttonObjectChoice1 = (Button)findViewById(R.id.buttonChoice1);
         buttonObjectChoice2 = (Button)findViewById(R.id.buttonChoice2);
@@ -48,13 +48,14 @@ public class GameActivity extends Activity implements View.OnClickListener {
         buttonObjectChoice2.setOnClickListener(this);
         buttonObjectChoice3.setOnClickListener(this);
 
+        Toast.makeText(getApplicationContext(),"onCreate",Toast.LENGTH_LONG).show();
         setQuestion();
     }
 
 
     @Override
     public void onClick(View view) {
-        int answerGiven;
+        int answerGiven = 0;
         switch (view.getId()){
             case R.id.buttonChoice1:
                 answerGiven = Integer.parseInt("" + buttonObjectChoice1.getText());
@@ -71,7 +72,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
     }
 
     void setQuestion(){
-        int numberRange = currentLevel *3;
+        int numberRange = currentLevel * 3;
         Random randInt = new Random();
 
         int partA = randInt.nextInt(numberRange);
@@ -85,7 +86,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
         int wrongAnswer2 = correctAnswer + 2;
 
         textObjectPartA.setText(""+partA);
-        textObjectPartA.setText(""+partB);
+        textObjectPartB.setText(""+partB);
 
         //number between 0 and 2
         int buttonLayout = randInt.nextInt(3);
